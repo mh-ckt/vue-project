@@ -19,8 +19,8 @@ const router = createRouter({
       component: () => import('@/layouts/nav.vue')
     },
     {
-      path: '/csss',
-      name: 'csss',
+      path: '/style',
+      name: 'style',
       component: () => import('@/layouts/nav.vue')
     },
     {
