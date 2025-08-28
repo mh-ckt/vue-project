@@ -5,14 +5,14 @@ const open = ref(false)
 
 <template>
   <button @click="open = true"><span>Open Modal</span></button>
-  <!-- <Teleport to="body"> -->
-  <div v-if="open" class="modal">
-    <div class="content">
-      <p>Hello from the modal!</p>
-      <button @click="open = false"><span>Close</span></button>
+  <Teleport to="body">
+    <div v-if="open" class="modal">
+      <div class="content">
+        <p>Hello from the modal!</p>
+        <button @click="open = false"><span>Close</span></button>
+      </div>
     </div>
-  </div>
-  <!-- </Teleport> -->
+  </Teleport>
 </template>
 
 <style scoped lang="less">

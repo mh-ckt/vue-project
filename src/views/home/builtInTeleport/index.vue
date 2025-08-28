@@ -14,13 +14,13 @@ import AntdvModal from './antdvModal.vue';
 
 <style lang="less" scoped>
 .modal-wrap {
-  // position: absolute;
-  // left: 50%;
-  // top: 0;
-  // transform: translateX(-50%);
-  // display: flex;
-  // align-items: center;
-  // gap: 10px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
 
   p {
     white-space: nowrap;
