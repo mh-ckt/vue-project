@@ -1,4 +1,22 @@
-#app {
+/* 设置响应式布局基准 */
+:root {
+  --base: 1920;
+}
+
+html {
+  font-size: calc(10 / var(--base) * 100vw);
+}
+
+@media (max-width: 1023px),
+(orientation: portrait) {
+  :root {
+    --base: 428;
+  }
+}
+
+/* 重写元素样式 */
+#app,
+p {
   margin: 0;
   padding: 0;
 }

@@ -44,9 +44,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <header>
-    <component :is="checked" />
-  </header>
+  <component :is="checked" />
   <van-tabbar v-model="active" @change="onChange">
     <van-tabbar-item name="home" icon="home-o">首页</van-tabbar-item>
     <van-tabbar-item name="style" icon="search">样式汇总</van-tabbar-item>

@@ -1,9 +1,11 @@
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import AutoImport from 'unplugin-auto-import/vite'
+
 import Components from 'unplugin-vue-components/vite'
+import AutoImport from 'unplugin-auto-import/vite'
 import { VantResolver } from '@vant/auto-import-resolver'
+import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 // import less from 'vite-plugin-less'
 // import vueDevTools from 'vite-plugin-vue-devtools'
 // https://vitejs.dev/config/
@@ -14,16 +16,21 @@ export default defineConfig({
   },
   plugins: [
     vue(),
-    //    vueDevTools(),
     AutoImport({
       resolvers: [VantResolver()]
     }),
+    //    vueDevTools(),
     // less({
     //   javascriptEnabled: true // 确保这里设置为 true
     // }),
     Components({
-      resolvers: [VantResolver()]
-    })
+      resolvers: [
+        VantResolver(),
+        AntDesignVueResolver({
+          importStyle: false,
+        }),
+      ],
+    }),
   ],
   css: {
     preprocessorOptions: {
