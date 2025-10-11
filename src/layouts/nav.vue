@@ -2,7 +2,7 @@
 import { ref, reactive, markRaw, onMounted } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import Home from '../views/home/index.vue'
-import Style from '../views/style/index.vue'
+import StyleSummary from '../views/StyleSummary/index.vue'
 import Todo from '../views/todo/index.vue'
 import Me from '../views/me/index.vue'
 const active = ref('home')
@@ -15,8 +15,8 @@ const tabs = reactive([
     component: markRaw(Home)
   },
   {
-    name: 'style',
-    component: markRaw(Style)
+    name: 'style-summary',
+    component: markRaw(StyleSummary)
   },
   {
     name: 'todo',
@@ -47,7 +47,7 @@ onMounted(() => {
   <component :is="checked" />
   <van-tabbar v-model="active" @change="onChange">
     <van-tabbar-item name="home" icon="home-o">首页</van-tabbar-item>
-    <van-tabbar-item name="style" icon="search">样式汇总</van-tabbar-item>
+    <van-tabbar-item name="style-summary" icon="search">样式汇总</van-tabbar-item>
     <van-tabbar-item name="todo" icon="friends-o">待办</van-tabbar-item>
     <van-tabbar-item name="me" icon="setting-o">我的</van-tabbar-item>
   </van-tabbar>

@@ -6,29 +6,29 @@ const router = createRouter({
     {
       path: '/',
       name: 'nav',
-      component: () => import('@/layouts/nav.vue')
+      component: () => import('@/layouts/nav.vue'),
     },
     {
       path: '/home',
       name: 'home',
-      component: () => import('@/layouts/nav.vue')
+      component: () => import('@/layouts/nav.vue'),
     },
     {
       path: '/me',
       name: 'me',
-      component: () => import('@/layouts/nav.vue')
+      component: () => import('@/layouts/nav.vue'),
     },
     {
-      path: '/style',
-      name: 'style',
-      component: () => import('@/layouts/nav.vue')
+      path: '/style-summary',
+      name: 'style-summary',
+      component: () => import('@/layouts/nav.vue'),
     },
     {
       path: '/todo',
       name: 'todo',
-      component: () => import('@/layouts/nav.vue')
-    }
-  ]
+      component: () => import('@/layouts/nav.vue'),
+    },
+  ],
 })
 
 export default router
